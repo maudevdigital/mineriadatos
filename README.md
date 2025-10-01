@@ -124,10 +124,3 @@ El script ejecutará automáticamente:
 2. **Feature Engineering**: Crear interacciones entre variables
 3. **Monitoreo**: Evaluar sesgos en variables protegidas
 4. **Validación Externa**: Probar con datos más recientes
-
----
-
-**Autor**: [Tu Nombre]  
-**Curso**: Minería de Datos  
-**Fecha**: Octubre 2025  
-**Institución**: [Tu Universidad]
