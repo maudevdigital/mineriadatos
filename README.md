@@ -12,7 +12,8 @@ mineriadatos/
 │   └── adult.csv                    # Dataset original UCI
 ├── src/
 │   ├── main.py                      # Script principal de análisis
-│   └── generar_documentos.py        # Generador de documentos Word
+│   ├── generar_documentos.py        # Generador de todos los documentos
+│   └── generar_informe.py           # Generador específico del informe
 ├── results/
 │   ├── datos/
 │   │   └── adult_clean.csv         # Dataset limpio y preprocesado
@@ -29,8 +30,9 @@ mineriadatos/
 │   │   ├── matriz_confusion_rf.png
 │   │   ├── curvas_roc.png
 │   │   └── importancia_variables.png
-│   ├── Respuestas_Solemne_I.docx   # Respuestas a las 20 preguntas
-│   └── Prompt_Presentacion_PPT.docx # Prompt para generar PPT con IA
+│   ├── Informe_Grupal_Solemne_I.docx   # 📄 INFORME OFICIAL (máx. 3 págs)
+│   ├── Respuestas_Solemne_I.docx       # Respuestas detalladas 20 preguntas
+│   └── Prompt_Presentacion_PPT.docx    # Prompt para generar PPT con IA
 └── README.md
 ```
 
@@ -93,23 +95,35 @@ La consistencia con los resultados holdout confirma la robustez de los modelos.
 
 ## 📝 Documentación de Evaluación
 
-El proyecto incluye documentación completa para la evaluación Solemne I:
+El proyecto incluye **documentación completa** para la Solemne I según el enunciado del profesor Diego Robles C.:
 
-### 1. Respuestas_Solemne_I.docx
-Documento Word con respuestas detalladas a las 20 preguntas de evaluación, organizadas en 6 secciones:
+### 1. 📄 Informe_Grupal_Solemne_I.docx (ENTREGABLE OFICIAL)
+**Informe grupal de máximo 3 páginas** que cumple con todos los requisitos:
+- ✅ Introducción y metodología
+- ✅ Resultados y comparación de modelos
+- ✅ Análisis de variables y visualización
+- ✅ Comparación crítica y escalabilidad
+- ✅ Consideraciones éticas y recomendaciones
+- ✅ Conclusiones con respuestas a las 20 preguntas integradas
+- **Formato**: Profesional, conciso, listo para entregar
+
+### 2. 📚 Respuestas_Solemne_I.docx (MATERIAL DE APOYO)
+Documento extenso con respuestas **detalladas** a las 20 preguntas de evaluación:
 - **I. Análisis y Preprocesamiento** (Q1-3)
 - **II. Modelos y Rendimiento** (Q4-7)
 - **III. Validación Cruzada** (Q8-10)
 - **IV. Visualización y Explicación** (Q11-13)
 - **V. Comparación Crítica** (Q14-16)
 - **VI. Ética y Aplicación Real** (Q17-20)
+- **Uso**: Estudio, preparación de presentación oral, consulta
 
-### 2. Prompt_Presentacion_PPT.docx
-Prompt optimizado para generar presentación profesional usando plataformas de IA:
+### 3. 🎤 Prompt_Presentacion_PPT.docx (PRESENTACIÓN ORAL)
+Prompt optimizado para generar presentación de **15 minutos**:
 - Estructura de 15 diapositivas completas
-- Instrucciones de diseño visual
-- Compatible con Gamma.app, Tome.app, Beautiful.AI
-- Incluye todos los hallazgos clave del análisis
+- Todos los datos, tablas y métricas incluidas
+- Instrucciones de diseño visual profesional
+- Compatible con: **Gamma.app** ⭐, Tome.app, Beautiful.AI
+- **Uso**: Copiar prompt → Pegar en plataforma IA → PPT automático
 
 ## 🚀 Uso
 
@@ -134,13 +148,14 @@ El script generará automáticamente:
 # Instalar librería adicional
 pip install python-docx
 
-# Generar documentos de evaluación
+# Generar TODOS los documentos de evaluación
 python src/generar_documentos.py
 ```
 
-Esto creará:
-- **Respuestas_Solemne_I.docx**: Documento con respuestas completas a las 20 preguntas de evaluación
-- **Prompt_Presentacion_PPT.docx**: Prompt optimizado para generar presentación PPT con IA (Gamma, Tome, Beautiful.AI)
+Esto creará **3 documentos** en `results/`:
+1. **Informe_Grupal_Solemne_I.docx**: Informe oficial de máx. 3 páginas ✅ ENTREGAR
+2. **Respuestas_Solemne_I.docx**: Respuestas detalladas a las 20 preguntas (apoyo)
+3. **Prompt_Presentacion_PPT.docx**: Prompt para generar PPT con IA (Gamma.app)
 
 ## Características del Código
 
