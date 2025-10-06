@@ -1,32 +1,80 @@
 # # Análisis de Clasificación Binaria - Adult Income Dataset
 
-## Descripción del Proyecto
+## De## 📊 Resultados Principales
+
+### Comparativa de Modelos
+
+| Modelo | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|--------|----------|-----------|--------|----------|---------|
+| **Regresión Logística** | 85.26% | 73.82% | 60.08% | **66.24%** | 90.24% |
+| **Random Forest** | 85.67% | 79.59% | 54.46% | 64.67% | **90.70%** |
+
+**Modelo ganador**: Regresión Logística (mejor F1-Score y balance precision-recall)
+
+### Validación Cruzada (5-fold stratified)
+
+- **Regresión Logística**: F1 = 66.09% ± 1.00%
+- **Random Forest**: F1 = 64.86% ± 0.94%
+
+La consistencia con los resultados holdout confirma la robustez de los modelos.
+
+### Variables Más Importantes (Random Forest)
+
+1. **capital-gain** (16.43%) - Ganancias de capital
+2. **marital-status_Married-civ-spouse** (14.45%) - Estado civil casado
+3. **education-num** (10.77%) - Años de educación
+4. **relationship_Husband** (9.93%) - Rol familiar
+5. **age** (6.46%) - Edad
+
+## 📝 Documentación de Evaluación
+
+El proyecto incluye documentación completa para la evaluación Solemne I:
+
+### 1. Respuestas_Solemne_I.docx
+Documento Word con respuestas detalladas a las 20 preguntas de evaluación, organizadas en 6 secciones:
+- **I. Análisis y Preprocesamiento** (Q1-3)
+- **II. Modelos y Rendimiento** (Q4-7)
+- **III. Validación Cruzada** (Q8-10)
+- **IV. Visualización y Explicación** (Q11-13)
+- **V. Comparación Crítica** (Q14-16)
+- **VI. Ética y Aplicación Real** (Q17-20)
+
+### 2. Prompt_Presentacion_PPT.docx
+Prompt optimizado para generar presentación profesional usando plataformas de IA:
+- Estructura de 15 diapositivas completas
+- Instrucciones de diseño visual
+- Compatible con Gamma.app, Tome.app, Beautiful.AI
+- Incluye todos los hallazgos clave del análisisProyecto
 
 Este proyecto implementa un análisis completo de clasificación binaria utilizando el **Adult Income Dataset** del UCI Machine Learning Repository. El objetivo es predecir si una persona gana más de $50K anuales basándose en características demográficas y laborales.
 
-## Estructura del Proyecto
+## 📂 Estructura del Proyecto
 
 ```
 mineriadatos/
 ├── data/
-│   └── adult.csv                    # Dataset original
+│   └── adult.csv                    # Dataset original UCI
 ├── src/
-│   └── main.py                      # Código principal optimizado
+│   ├── main.py                      # Script principal de análisis
+│   └── generar_documentos.py        # Generador de documentos Word
 ├── results/
 │   ├── datos/
-│   │   └── adult_clean.csv          # Datos preprocesados
+│   │   └── adult_clean.csv         # Dataset limpio y preprocesado
 │   ├── metricas/
-│   │   ├── holdout.csv              # Métricas holdout validation
-│   │   ├── validacion_cruzada.csv   # Métricas cross-validation
-│   │   ├── comparacion_modelos.csv  # Comparación completa
-│   │   └── importancia_variables.csv # Importancia de características
-│   └── visualizaciones/
-│       ├── distribucion_clases.png   # Distribución variable objetivo
-│       ├── boxplots_outliers.png     # Detección de outliers
-│       ├── matriz_confusion_lr.png   # Matriz confusión - Regresión Logística
-│       ├── matriz_confusion_rf.png   # Matriz confusión - Random Forest
-│       ├── curvas_roc.png           # Comparación curvas ROC
-│       └── importancia_variables.png # Top 15 variables más importantes
+│   │   ├── holdout.csv             # Resultados evaluación holdout
+│   │   ├── validacion_cruzada.csv  # Resultados CV 5-fold
+│   │   ├── comparacion_modelos.csv # Comparativa entre modelos
+│   │   └── importancia_variables.csv # Feature importance
+│   ├── visualizaciones/
+│   │   ├── distribucion_clases.png
+│   │   ├── boxplot_age.png
+│   │   ├── boxplot_hours.png
+│   │   ├── matriz_confusion_lr.png
+│   │   ├── matriz_confusion_rf.png
+│   │   ├── curvas_roc.png
+│   │   └── importancia_variables.png
+│   ├── Respuestas_Solemne_I.docx   # Respuestas a las 20 preguntas
+│   └── Prompt_Presentacion_PPT.docx # Prompt para generar PPT con IA
 └── README.md
 ```
 
@@ -76,24 +124,36 @@ mineriadatos/
 - **Desbalance de Clases**: 75.9% vs 24.1%
 - **Outliers**: 27.7% en hours-per-week
 
-## Instalación y Uso
+## 🚀 Uso
 
-### Requisitos
+### Ejecución del Análisis Principal
+
 ```bash
+# Instalar dependencias
 pip install numpy pandas matplotlib seaborn scikit-learn
-```
 
-### Ejecución
-```bash
+# Ejecutar análisis completo
 python src/main.py
 ```
 
-El script ejecutará automáticamente:
-1. Carga y análisis exploratorio
-2. Limpieza y preprocesamiento
-3. Entrenamiento de modelos
-4. Evaluación completa
-5. Generación de visualizaciones
+El script generará automáticamente:
+- Dataset limpio en `results/datos/`
+- Métricas de evaluación en `results/metricas/`
+- Visualizaciones en `results/visualizaciones/`
+
+### Generación de Documentos Word
+
+```bash
+# Instalar librería adicional
+pip install python-docx
+
+# Generar documentos de evaluación
+python src/generar_documentos.py
+```
+
+Esto creará:
+- **Respuestas_Solemne_I.docx**: Documento con respuestas completas a las 20 preguntas de evaluación
+- **Prompt_Presentacion_PPT.docx**: Prompt optimizado para generar presentación PPT con IA (Gamma, Tome, Beautiful.AI)
 
 ## Características del Código
 
@@ -127,7 +187,3 @@ El script ejecutará automáticamente:
 
 ---
 
-**Autor**: [Tu Nombre]  
-**Curso**: Minería de Datos  
-**Fecha**: Octubre 2025  
-**Institución**: [Tu Universidad]

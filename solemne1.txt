@@ -1,0 +1,113 @@
+Solemne I Minería de datos
+
+Profesor Diego Robles C
+
+Objetivos
+●	Aplicar técnicas de clasificación binaria sobre datos socioeconómicos.
+
+●	Implementar validación cruzada como herramienta de evaluación robusta.
+
+●	Comparar modelos de clasificación usando métricas consistentes.
+
+●	Justificar decisiones metodológicas y comunicar hallazgos.
+
+Contexto
+El análisis de datos demográficos es clave en estudios de política pública y toma de decisiones. Mediante el uso de modelos de clasificación y evaluación robusta, se puede predecir el nivel de ingreso de las personas según sus características personales y laborales.
+
+Pregunta a responder
+¿Qué modelo de clasificación predice con mayor precisión el nivel de ingreso de una persona y cómo se comporta cada modelo al aplicar validación cruzada?
+
+Dataset a utilizar
+Adult Income Dataset (UCI)
+ Fuente: Kaggle - Adult Census Income
+ Archivo: adult.csv
+Instrucciones
+1.	Cargar y explorar el dataset.
+
+2.	Codificar variables categóricas (por ejemplo, usando One-Hot Encoding o Label Encoding).
+
+3.	Implementar al menos dos modelos de clasificación:
+
+○	Regresión Logística
+
+○	Random Forest
+
+4.	Evaluar los modelos mediante:
+
+○	Métricas convencionales: Accuracy, Precision, Recall, F1-score
+
+○	Validación cruzada (k-fold = 5)
+
+5.	Comparar los resultados obtenidos con y sin validación cruzada.
+
+6.	Visualizar la importancia de variables (Random Forest).
+
+7.	Preparar una presentación oral en la que se expongan resultados y reflexiones.
+
+
+Entregables
+●	Informe grupal (máx. 3 páginas).
+
+●	Presentación oral (15 minutos por grupo).
+
+ Sobre el análisis y preprocesamiento
+1.	¿Qué estrategias utilizaron para manejar los valores faltantes o inconsistentes en el dataset? ¿Por qué las eligieron?
+
+2.	¿Cómo decidieron qué método de codificación utilizar para las variables categóricas (Label vs One-Hot Encoding)?
+
+3.	¿Detectaron sesgos o desbalance en las clases del dataset? ¿Cómo podrían afectarlos en un escenario real?
+
+ Sobre los modelos y su rendimiento
+4.	¿Cuál de los dos modelos (Logistic Regression o Random Forest) se desempeñó mejor en términos generales?
+
+5.	¿Qué diferencias notaron en el comportamiento de cada modelo frente a diferentes métricas (accuracy, recall, F1, etc.)?
+
+6.	¿Cómo interpretarían una alta precisión, pero baja sensibilidad en este problema? ¿Es deseable?
+
+7.	¿Qué suposiciones hace cada modelo sobre los datos y cómo se relaciona eso con sus resultados?
+
+Sobre validación cruzada y evaluación
+8.	¿Por qué es importante realizar validación cruzada en lugar de confiar solo en un split de entrenamiento y test?
+
+9.	¿Qué diferencias encontraron entre los resultados obtenidos con y sin validación cruzada?
+
+10.	¿Qué ventajas tiene usar f1-score como métrica de evaluación en lugar de solo accuracy en este contexto?
+
+ Sobre visualización y explicación
+11.	¿Qué aprendieron al observar la matriz de confusión? ¿Hubo más falsos positivos o falsos negativos?
+
+12.	¿Cuáles fueron las variables más importantes para el modelo Random Forest? ¿Son coherentes con el sentido común o el conocimiento del problema?
+
+13.	¿Podrían explicar cómo contribuyen las variables más relevantes a la predicción del ingreso en términos reales?
+
+Comparación crítica de modelos
+14.	¿Qué modelo sería más adecuado si quisiéramos interpretar las decisiones que toma? ¿Y si solo importara la precisión?
+
+15.	¿Qué ventajas ofrece Random Forest sobre la regresión logística? ¿Qué desventajas podría tener?
+
+16.	¿Cuál de los modelos escalaría mejor a una base de datos de millones de registros? ¿Por qué?
+
+Ética y aplicación real
+17.	¿Qué problemas éticos podrían surgir al usar un modelo que predice ingresos para tomar decisiones reales (por ejemplo, préstamos o selección laboral)?
+
+18.	¿Cómo podrían los sesgos sociales presentes en los datos afectar las decisiones de un modelo?
+
+19.	¿Qué harían diferente si tuvieran que usar este sistema en una aplicación real de política pública?
+
+20.	¿Cómo podrían hacer que el modelo sea más justo o equitativo?
+
+Rúbrica de evaluación
+Evaluación grupal (70 pts)
+Criterio	Puntos
+Análisis exploratorio y preprocesamiento	10
+Implementación correcta de modelos	15
+Evaluación con validación cruzada	15
+Comparación y justificación de resultados	10
+Visualizaciones y calidad del informe	10
+Claridad en la exposición oral	10
+Evaluación individual (30 pts)
+Criterio	Puntos
+Participación activa en presentación	10
+Argumentación técnica	10
+Dominio del flujo metodológico aplicado	10
+
