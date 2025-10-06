@@ -1,50 +1,6 @@
-# # Análisis de Clasificación Binaria - Adult Income Dataset
+# Análisis de Clasificación Binaria - Adult Income Dataset
 
-## De## 📊 Resultados Principales
-
-### Comparativa de Modelos
-
-| Modelo | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-|--------|----------|-----------|--------|----------|---------|
-| **Regresión Logística** | 85.26% | 73.82% | 60.08% | **66.24%** | 90.24% |
-| **Random Forest** | 85.67% | 79.59% | 54.46% | 64.67% | **90.70%** |
-
-**Modelo ganador**: Regresión Logística (mejor F1-Score y balance precision-recall)
-
-### Validación Cruzada (5-fold stratified)
-
-- **Regresión Logística**: F1 = 66.09% ± 1.00%
-- **Random Forest**: F1 = 64.86% ± 0.94%
-
-La consistencia con los resultados holdout confirma la robustez de los modelos.
-
-### Variables Más Importantes (Random Forest)
-
-1. **capital-gain** (16.43%) - Ganancias de capital
-2. **marital-status_Married-civ-spouse** (14.45%) - Estado civil casado
-3. **education-num** (10.77%) - Años de educación
-4. **relationship_Husband** (9.93%) - Rol familiar
-5. **age** (6.46%) - Edad
-
-## 📝 Documentación de Evaluación
-
-El proyecto incluye documentación completa para la evaluación Solemne I:
-
-### 1. Respuestas_Solemne_I.docx
-Documento Word con respuestas detalladas a las 20 preguntas de evaluación, organizadas en 6 secciones:
-- **I. Análisis y Preprocesamiento** (Q1-3)
-- **II. Modelos y Rendimiento** (Q4-7)
-- **III. Validación Cruzada** (Q8-10)
-- **IV. Visualización y Explicación** (Q11-13)
-- **V. Comparación Crítica** (Q14-16)
-- **VI. Ética y Aplicación Real** (Q17-20)
-
-### 2. Prompt_Presentacion_PPT.docx
-Prompt optimizado para generar presentación profesional usando plataformas de IA:
-- Estructura de 15 diapositivas completas
-- Instrucciones de diseño visual
-- Compatible con Gamma.app, Tome.app, Beautiful.AI
-- Incluye todos los hallazgos clave del análisisProyecto
+## Descripción del Proyecto
 
 Este proyecto implementa un análisis completo de clasificación binaria utilizando el **Adult Income Dataset** del UCI Machine Learning Repository. El objetivo es predecir si una persona gana más de $50K anuales basándose en características demográficas y laborales.
 
@@ -109,20 +65,51 @@ mineriadatos/
 - **Cross-Validation**: 5-fold estratificado
 - **Métricas**: Accuracy, Precision, Recall, F1-Score, ROC-AUC
 
-## Resultados Principales
+## 📊 Resultados Principales
 
-### Rendimiento de Modelos
+### Comparativa de Modelos
 
-| Modelo | F1-Score | ROC-AUC | Precisión | Recall |
-|--------|----------|---------|-----------|--------|
-| **Regresión Logística** | **66.85%** | 90.43% | 73.82% | 60.08% |
-| Random Forest | 64.31% | **90.74%** | 79.59% | 54.46% |
+| Modelo | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|--------|----------|-----------|--------|----------|---------|
+| **Regresión Logística** | 85.26% | 73.82% | 60.08% | **66.24%** | 90.24% |
+| **Random Forest** | 85.67% | 79.59% | 54.46% | 64.67% | **90.70%** |
 
-### Hallazgos Clave
-- **Modelo Ganador**: Regresión Logística (mejor F1-Score)
-- **Variables Más Importantes**: capital-gain, marital-status, education-num
-- **Desbalance de Clases**: 75.9% vs 24.1%
-- **Outliers**: 27.7% en hours-per-week
+**Modelo ganador**: Regresión Logística (mejor F1-Score y balance precision-recall)
+
+### Validación Cruzada (5-fold stratified)
+
+- **Regresión Logística**: F1 = 66.09% ± 1.00%
+- **Random Forest**: F1 = 64.86% ± 0.94%
+
+La consistencia con los resultados holdout confirma la robustez de los modelos.
+
+### Variables Más Importantes (Random Forest)
+
+1. **capital-gain** (16.43%) - Ganancias de capital
+2. **marital-status_Married-civ-spouse** (14.45%) - Estado civil casado
+3. **education-num** (10.77%) - Años de educación
+4. **relationship_Husband** (9.93%) - Rol familiar
+5. **age** (6.46%) - Edad
+
+## 📝 Documentación de Evaluación
+
+El proyecto incluye documentación completa para la evaluación Solemne I:
+
+### 1. Respuestas_Solemne_I.docx
+Documento Word con respuestas detalladas a las 20 preguntas de evaluación, organizadas en 6 secciones:
+- **I. Análisis y Preprocesamiento** (Q1-3)
+- **II. Modelos y Rendimiento** (Q4-7)
+- **III. Validación Cruzada** (Q8-10)
+- **IV. Visualización y Explicación** (Q11-13)
+- **V. Comparación Crítica** (Q14-16)
+- **VI. Ética y Aplicación Real** (Q17-20)
+
+### 2. Prompt_Presentacion_PPT.docx
+Prompt optimizado para generar presentación profesional usando plataformas de IA:
+- Estructura de 15 diapositivas completas
+- Instrucciones de diseño visual
+- Compatible con Gamma.app, Tome.app, Beautiful.AI
+- Incluye todos los hallazgos clave del análisis
 
 ## 🚀 Uso
 
@@ -187,3 +174,4 @@ Esto creará:
 
 ---
 
+**Grupo 4 - Minería de Datos**
