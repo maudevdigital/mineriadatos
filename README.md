@@ -189,4 +189,34 @@ Esto creará **3 documentos** en `results/`:
 
 ---
 
+## 📋 Checklist de Entregables Solemne I
+
+### ✅ Entregables Completados:
+
+- [x] **Informe Grupal** (máx. 3 páginas) → `Informe_Grupal_Solemne_I.docx`
+- [x] **Presentación Oral** (15 minutos) → `Prompt_Presentacion_PPT.docx` (generar PPT)
+- [x] Análisis exploratorio y preprocesamiento
+- [x] Implementación correcta de 2 modelos (LR + RF)
+- [x] Evaluación con validación cruzada (5-fold)
+- [x] Comparación y justificación de resultados
+- [x] Visualizaciones (6 gráficos generados)
+- [x] Respuestas a las 20 preguntas del enunciado
+
+### 📝 Criterios de Evaluación Cubiertos:
+
+**Evaluación Grupal (70 pts):**
+- ✅ Análisis exploratorio y preprocesamiento (10 pts)
+- ✅ Implementación correcta de modelos (15 pts)
+- ✅ Evaluación con validación cruzada (15 pts)
+- ✅ Comparación y justificación de resultados (10 pts)
+- ✅ Visualizaciones y calidad del informe (10 pts)
+- ⏳ Claridad en la exposición oral (10 pts) - *Preparar con material generado*
+
+**Evaluación Individual (30 pts):**
+- ⏳ Participación activa en presentación (10 pts)
+- ⏳ Argumentación técnica (10 pts)
+- ⏳ Dominio del flujo metodológico aplicado (10 pts)
+
+---
+
 **Grupo 4 - Minería de Datos**
